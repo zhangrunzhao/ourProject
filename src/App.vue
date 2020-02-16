@@ -1,15 +1,18 @@
 <template>
   <div id="app">
     <nav-bar></nav-bar>
+    <index></index>
   </div>
 </template>
 
 <script>
 import navBar from './components/navBar/navBar'
+import index from './components/index/index'
 export default {
   name: 'app',
   components: {
-    navBar
+    navBar,
+    index
   }
 }
 </script>
@@ -37,4 +40,11 @@ body,div,ol,ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,form,fieldset,legend,input{ margi
     outline-color: transparent ;
     box-shadow: none;
   }
+
+ body {
+    background-color: #FAFAFA;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #101010;
+  }
+
 </style>

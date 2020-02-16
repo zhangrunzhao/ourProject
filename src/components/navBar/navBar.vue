@@ -20,7 +20,7 @@
       <div class="searchAndLog" disabled>
         <input class="search" type="text" placeholder="搜索一下吧" />
         <div class="el-icon-shopping-cart-2 shoppingCart"></div>
-        <div>登录/注册</div>
+        <div class="login">登录/注册</div>
       </div>
     </div>
   </div>
@@ -70,7 +70,7 @@ export default {
   font-weight: 600;
 }
 .navBar {
-  display: flex;
+  min-width: 450px;
 
   height: 50px !important;
 }
@@ -100,5 +100,8 @@ export default {
     padding-right: 20px;
     padding-left: 8px;
     font-size: 30px;
+}
+.login{
+    min-width: 100px;
 }
 </style>
