@@ -45,6 +45,10 @@ body,div,ol,ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,form,fieldset,legend,input{ margi
     background-color: #FAFAFA;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #101010;
+     font-family: PingFang SC;
+     height: 2000px;
+     min-width: 1510px;
+     max-width: 100%;
   }
 
 </style>
