@@ -3,21 +3,22 @@
     <div><i class="el-icon-arrow-left el-icon--left"></i>上页</div>
  
     <ul class="paginationItem">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
+        <li v-for="(item,index) in listData" :key="index">{{item}}</li>
     </ul>
      <div>下页<i class="el-icon-arrow-right el-icon--right"></i></div>
   </div>
 </template>
 
 <script>
+import {inject} from "@vue/composition-api"
 export default {
-    setup(){
-
+   setup(){
+        const listData = inject("listData")
+        return {
+            listData
+        }
     }
+    
 };
 </script>
 

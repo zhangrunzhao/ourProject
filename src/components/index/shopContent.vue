@@ -15,7 +15,15 @@
 <script>
 import shopCard from './shopCard'
 import pagination from './pagination'
+import {ref,provide} from '@vue/composition-api'
 export default {
+    setup(){
+        const listData = ref([2,3,4,5,6]);
+        provide("listData",listData);
+        return {
+            listData
+        }
+    },
     components:{
         shopCard,
         pagination
