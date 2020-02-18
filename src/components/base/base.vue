@@ -6,11 +6,22 @@
       </el-carousel-item>
     </el-carousel>
     <base-nav></base-nav>
+    <div class="baseMainBox">
+      <base-content></base-content>
+      <div class="userAndModule">
+        <base-user-card></base-user-card>
+        <base-module></base-module>
+      </div>
+    </div>
+    
   </div>
 </template>
 
 <script>
 import baseNav from './baseNav'
+import baseContent from './baseContent'
+import baseUserCard from './baseUserCard'
+import baseModule from './baseModule'
 import { ref } from "@vue/composition-api";
 export default {
   setup() {
@@ -25,7 +36,10 @@ export default {
     };
   },
   components: {
-    baseNav
+    baseNav,
+    baseContent,
+    baseUserCard,
+    baseModule
   }
 };
 </script>
@@ -34,10 +48,18 @@ export default {
 .baseContainer {
   min-width: 900px;
   margin-top: 15px;
-  padding: 0 280px;
+  padding: 0 360px;
+  box-sizing: border-box;
+  -webkit-user-select: none;
 }
 .el_carousel {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+}
+.baseMainBox{
+  display: flex;
+}
+.userAndModule{
+  flex: 1;
 }
 </style>

@@ -99,9 +99,7 @@ img {
 }
 body {
   background-color: #fafafa;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #101010;
-  font-family: PingFang SC;
   min-width: 1510px;
   max-width: 100%;
 }
