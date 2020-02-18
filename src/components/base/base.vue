@@ -10,7 +10,8 @@
       <base-content></base-content>
       <div class="userAndModule">
         <base-user-card></base-user-card>
-        <base-module></base-module>
+        <base-module topic="热门板块" :content=hotModuData></base-module>
+        <base-module topic="其他板块" :content=otherModuData></base-module>
       </div>
     </div>
     
@@ -31,8 +32,12 @@ export default {
       require("../../assets/3.jpg"),
       require("../../assets/4.jpg")
     ]);
+    const hotModuData = ref(['COS','游戏','番剧'])
+    const otherModuData = ref(['COS','游戏','番剧','宅舞','裸奔'])
     return {
-      imgData
+      imgData,
+      hotModuData,
+      otherModuData
     };
   },
   components: {

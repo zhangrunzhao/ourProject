@@ -1,19 +1,32 @@
 <template>
   <div class="baseModuleContainer">
       <div class="moduleTopic">
-        热门板块
+        {{topic}}
       </div>
       <div class="moduleContent">
-          <span>COS</span>
-          <span>游戏</span>
-          <span>番剧</span>
+          <span  v-for="(item,index) in contents" :key="index">{{item}}</span>
       </div>
   </div>
 </template>
 
 <script>
+import {props, ref} from '@vue/composition-api'
 export default {
-
+    setup(props) {
+        let contents = ref(props.content);
+        if(props.content.length %3 == 2){
+            let arr = props.content;
+            arr.push("");
+            contents = ref(arr)
+        }
+        return {
+            contents
+        }
+    },
+    props:{
+        topic: String,
+        content: Array
+    }
 }
 </script>
 
@@ -37,13 +50,14 @@ export default {
 }
 .moduleContent{
     display: flex;
-    height: 48px;
     justify-content: space-between;
-    padding: 0 20px;
-    box-sizing: border-box;
+    flex-wrap: wrap;
 }
 .moduleContent span {
+    width: 30%;
+    height: 48px;
     display: flex;
+    justify-content: center;
     align-items: center;
     font-size: 11px;
     color: #999;
