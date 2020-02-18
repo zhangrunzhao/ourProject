@@ -50,9 +50,7 @@ export default {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04)
 }
-.indexContainer img {
-  -webkit-user-drag: none;
-}
+
 .el-carousel__item h3 {
     color: #475669;
     font-size: 18px;

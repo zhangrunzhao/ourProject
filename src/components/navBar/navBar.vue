@@ -19,23 +19,29 @@
       </el-menu>
       <div class="searchAndLog" disabled>
         <input class="search" type="text" placeholder="搜索一下吧" />
-        <div class="el-icon-shopping-cart-2 shoppingCart"></div>
-        <div class="login">登录/注册</div>
+        <div class="el-icon-shopping-cart-2 shoppingCart" @click="handleSelect('5')"></div>
+        <div class="login" @click="handleSelect('6')">登录/注册</div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import {ref} from '@vue/composition-api'
 export default {
   data() {
     return {
       activeIndex: "1"
     };
   },
+  setup(props) {
+    
+  },
+  
   methods: {
     handleSelect(key) {
       this.activeIndex = key;
+      this.$emit("getNavIndex",key)
     }
   }
 };

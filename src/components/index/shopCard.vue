@@ -24,6 +24,7 @@ export default {
 
 <style>
 .shopCardContainer{
+    -webkit-user-select: none;
     width: 232px;
     height: 310px;
     background-color: #ffffff;

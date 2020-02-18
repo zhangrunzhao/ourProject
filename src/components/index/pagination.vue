@@ -67,7 +67,7 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
 box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
     border-radius: 50%;
 }
-li:hover{
+.paginationContainer li:hover{
     background-color: #FFC375;
 }
 </style>
