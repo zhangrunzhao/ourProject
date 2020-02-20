@@ -3,6 +3,7 @@
     <nav-bar @getNavIndex="getNavIndex"></nav-bar>
     <div v-if="navIndex==1" style="min-height: 700px"><index></index></div>
     <div v-if="navIndex==2" style="min-height: 700px"><base-view></base-view></div>
+    <div v-if="navIndex==5" style="min-height: 700px"><shoppingCart></shoppingCart></div>
     <bottom></bottom>
   </div>
 </template>
@@ -12,7 +13,7 @@ import { ref } from "@vue/composition-api";
 import navBar from "./components/navBar/navBar";
 import index from "./components/index/index";
 import bottom from "./components/bottom/bottom";
-// import shoppingCart from './components/shoppingCart/shoppingCart'
+import shoppingCart from './components/shoppingCart/shoppingCart'
 import baseView from './components/base/base'
 export default {
   setup() {
@@ -33,7 +34,7 @@ export default {
     navBar,
     index,
     bottom,
-    // shoppingCart,
+    shoppingCart,
     baseView
   }
 };

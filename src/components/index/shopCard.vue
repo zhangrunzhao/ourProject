@@ -1,24 +1,29 @@
 <template>
   <div class="shopCardContainer">
       <div class="imgBox">
-        <img src="../../assets/3.jpg" alt="">
+        <img :src="imgSrc" alt="">
       </div>
       <div class="shopDescribe">
-        <div class="goodName">【现货】机甲少女-诺赛提亚</div>
+        <div class="goodName">{{goodName}}</div>
         <span class="goodPrice">
-            239元
+            {{goodPrice}}
         </span>
         <div class="goodStatus">
-            <span>预售</span>
-            <span>跨境购</span>
+            <span v-for="(item,index) in goodStatus" :key="index">{{item}}</span>
         </div>
       </div>
   </div>
 </template>
 
 <script>
+import {ref} from '@vue/composition-api'
 export default {
-
+    props:{
+        goodName:String,
+        imgSrc:String,
+        goodPrice: String,
+        goodStatus: Array
+    }
 }
 </script>
 
@@ -33,6 +38,11 @@ export default {
     margin-bottom: 12px;
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+    transition-property: all;
+    transition-duration: 0.4s;
+}
+.shopCardContainer:hover{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 6px rgba(0, 0, 0, .04);
 }
 .imgBox{
     overflow: hidden;

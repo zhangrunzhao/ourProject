@@ -34,10 +34,6 @@ export default {
       activeIndex: "1"
     };
   },
-  setup(props) {
-    
-  },
-  
   methods: {
     handleSelect(key) {
       this.activeIndex = key;
