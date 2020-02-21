@@ -1,20 +1,35 @@
 <template>
   <div id="app">
     <nav-bar @getNavIndex="getNavIndex"></nav-bar>
-    <div v-if="navIndex==1" style="min-height: 700px"><index></index></div>
-    <div v-if="navIndex==2" style="min-height: 700px"><base-view></base-view></div>
-    <div v-if="navIndex==5" style="min-height: 700px"><shoppingCart></shoppingCart></div>
+    <div v-if="navIndex==1" style="min-height: 700px">
+      <index></index>
+    </div>
+    <div v-if="navIndex==2" style="min-height: 700px">
+      <base-view></base-view>
+    </div>
+    <div v-if="navIndex==4" style="min-height: 700px">
+      <notes></notes>
+    </div>
+    <div v-if="navIndex==5" style="min-height: 700px">
+      <shoppingCart></shoppingCart>
+    </div>
     <bottom></bottom>
   </div>
 </template>
 
 <script>
-import { ref } from "@vue/composition-api";
+import { ref} from "@vue/composition-api";
 import navBar from "./components/navBar/navBar";
 import index from "./components/index/index";
+import baseView from "./components/base/base";
+import notes from "./components/notes/notes";
+import shoppingCart from "./components/shoppingCart/shoppingCart";
 import bottom from "./components/bottom/bottom";
-import shoppingCart from './components/shoppingCart/shoppingCart'
-import baseView from './components/base/base'
+// var routers = new VueRouter({
+//     routes:[
+//       {path:'/login'}
+//     ]
+// })
 export default {
   setup() {
     const navIndex = ref(1);
@@ -26,17 +41,17 @@ export default {
       getNavIndex
     };
   },
-  methods: {
-    
-  },
+  methods: {},
   name: "app",
   components: {
     navBar,
     index,
-    bottom,
+    baseView,
+    notes,
     shoppingCart,
-    baseView
+    bottom
   }
+  
 };
 </script>
 

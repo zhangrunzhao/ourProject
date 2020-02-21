@@ -45,6 +45,7 @@ export default {
 
 <style>
 .navContainer {
+  user-select: none;
   height: 50px;
   background-color: #ffffff;
   box-shadow: 2px 0px 16px #cccccc;
