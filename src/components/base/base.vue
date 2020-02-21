@@ -51,9 +51,10 @@ export default {
     
 <style>
 .baseContainer {
-  min-width: 900px;
+  min-width: 800px;
+  max-width: 800px;
+  margin: 0 auto;
   margin-top: 15px;
-  padding: 0 360px;
   box-sizing: border-box;
   -webkit-user-select: none;
 }

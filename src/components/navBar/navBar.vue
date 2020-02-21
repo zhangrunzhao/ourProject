@@ -47,7 +47,7 @@ export default {
 .navContainer {
   height: 50px;
   background-color: #ffffff;
-  box-shadow: 2px 0px 8px #cccccc;
+  box-shadow: 2px 0px 16px #cccccc;
 }
 .navBox {
   padding: 0 290px !important;

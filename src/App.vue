@@ -101,7 +101,5 @@ img {
 body {
   background-color: #fafafa;
   color: #101010;
-  min-width: 1510px;
-  max-width: 100%;
 }
 </style>

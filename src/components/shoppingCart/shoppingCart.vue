@@ -32,6 +32,24 @@
           </div>
         </div>
       </el-checkbox-group>
+      <div class="shopCartCtnBottom">
+        <el-checkbox
+          :indeterminate="isIndeterminate"
+          v-model="checkAll"
+          @change="handleCheckAllChange"
+        >全选</el-checkbox>
+        <div class="delGoods">删除所选商品</div>
+        <div class="haveChoose">
+          已选
+          <span>0</span>件
+          <div class="allPrice">
+            总计(不含运费) :
+            <span>233元</span>
+          </div>
+        </div>
+
+        <div class="buyBtn">结算</div>
+      </div>
     </div>
   </div>
 </template>
@@ -65,8 +83,9 @@ export default {
 
 <style>
 .shoppingCartContainer {
-  min-width: 900px;
-  padding: 0 360px;
+  min-width: 800px;
+  max-width: 800px;
+  margin: 0 auto;
   margin-top: 15px;
   box-sizing: border-box;
   color: #606266;
@@ -101,10 +120,13 @@ export default {
 .shoppingCartContainer .el-checkbox__inner {
   border-color: #ffb432 !important;
 }
-.shopCartCtnTop {
+.shopCartCtnTop,
+.shopCartCtnBottom {
   display: flex;
   align-items: center;
   padding: 0 16px;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
 }
 .ctnGoodsInfo {
   margin-left: 104px;
@@ -182,5 +204,48 @@ export default {
 .ctnGoodsSeleText {
   justify-content: flex-end;
   width: 62px;
+}
+.shopCartCtnBottom {
+  height: 64px;
+  background-color: #e8e8e8;
+  margin-top: 16px;
+}
+.delGoods {
+  margin-left: 20px;
+}
+.haveChoose {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  margin-left: 125px;
+  justify-content: flex-end;
+}
+.haveChoose span {
+  font-size: 15px;
+  padding: 0 3px;
+  color: #ff0f0f;
+}
+.allPrice {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  text-align: center;
+}
+.allPrice span {
+  color: #ff0f0f;
+  font-size: 15px;
+  font-weight: 600;
+}
+.buyBtn {
+  margin-left: 10px;
+  width: 80px;
+  height: 32px;
+  background-color: #ff0f0f;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  border-radius: 10px;
 }
 </style>

@@ -52,9 +52,11 @@ export default {
 
 <style>
 .indexContainer {
-  min-width: 900px;
+  min-width: 800px;
+  max-width: 950px;
+  margin: 0 auto;
   margin-top: 15px;
-  padding: 0 280px;
+  /* padding: 0 280px; */
 }
 .el_carousel {
   border-radius: 5px;
